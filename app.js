@@ -3,7 +3,7 @@ const responseMiddleware = require('./middlewares/response');
 const statusMonitor = require('express-status-monitor');
 const authRoutes = require('./routes/auth');
 const { swaggerUi, swaggerDocs } = require('./swagger');
-// const userRoutes = require('./routes/user');
+const userRoutes = require('./routes/user');
 
 const app = express();
 
@@ -17,7 +17,7 @@ app.use(express.json());
 app.use(responseMiddleware);
 
 app.use('/api/v1/auth', authRoutes);
+app.use('/api/v1', userRoutes);
 app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerDocs));
-// app.use('/api/v1/users', userRoutes);
 
 module.exports = app;
