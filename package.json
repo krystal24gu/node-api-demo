@@ -1,0 +1,19 @@
+{
+  "name": "api-demo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "express": "^5.1.0",
+    "express-status-monitor": "^1.3.4",
+    "ioredis": "^5.8.2",
+    "jsonwebtoken": "^9.0.2"
+  }
+}
